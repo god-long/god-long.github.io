@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="xib,iOS," />
+  <meta name="keywords" content="xib,tableviewCell," />
 
 
 
@@ -82,34 +82,28 @@
 
 <meta name="description" content="初次使用xib创建UITableviewCell的时候，我都是一个xib文件里，只创建一个Cell,在实际业务中，往往都是一个列表中需要用到多个不同的Cell样式，这就需要创建N个.h .m .xib文件。而且这些.m中的实现还差不多。后来发现，一个.xib文件中可以创建多个Cell,如图：
 
-这样感觉方便多了。
-
-第一步创建先和普通创建xibCell一样，在xib中选中左边那个Cell，copy">
+这样感觉方便多了。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Xib使用之TableViewCell.xib中创建多个Cell">
 <meta property="og:url" content="http://yoursite.com/2016/04/13/Xib使用之TableViewCell-xib中创建多个Cell/index.html">
 <meta property="og:site_name" content="God-long's Blog">
 <meta property="og:description" content="初次使用xib创建UITableviewCell的时候，我都是一个xib文件里，只创建一个Cell,在实际业务中，往往都是一个列表中需要用到多个不同的Cell样式，这就需要创建N个.h .m .xib文件。而且这些.m中的实现还差不多。后来发现，一个.xib文件中可以创建多个Cell,如图：
 
-这样感觉方便多了。
-
-第一步创建先和普通创建xibCell一样，在xib中选中左边那个Cell，copy">
-<meta property="og:image" content="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-1.png">
-<meta property="og:image" content="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-2.png">
-<meta property="og:image" content="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-3.png">
-<meta property="og:image" content="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-4.png">
+这样感觉方便多了。">
+<meta property="og:image" content="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-1.png-main">
+<meta property="og:image" content="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-2.png-main">
+<meta property="og:image" content="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-3.png-main">
+<meta property="og:image" content="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-4.png-main">
 <meta property="og:image" content="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-5.gif">
-<meta property="og:image" content="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-6.png">
+<meta property="og:image" content="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-6.png-main">
 <meta property="og:image" content="http://7xsy1z.com2.z0.glb.clouddn.com/one-piece.png">
-<meta property="og:updated_time" content="2016-04-13T14:31:05.000Z">
+<meta property="og:updated_time" content="2016-04-14T02:12:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Xib使用之TableViewCell.xib中创建多个Cell">
 <meta name="twitter:description" content="初次使用xib创建UITableviewCell的时候，我都是一个xib文件里，只创建一个Cell,在实际业务中，往往都是一个列表中需要用到多个不同的Cell样式，这就需要创建N个.h .m .xib文件。而且这些.m中的实现还差不多。后来发现，一个.xib文件中可以创建多个Cell,如图：
 
-这样感觉方便多了。
-
-第一步创建先和普通创建xibCell一样，在xib中选中左边那个Cell，copy">
-<meta name="twitter:image" content="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-1.png">
+这样感觉方便多了。">
+<meta name="twitter:image" content="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-1.png-main">
 
 
 
@@ -352,17 +346,18 @@
 
       
         <p>初次使用xib创建UITableviewCell的时候，我都是一个xib文件里，只创建一个Cell,在实际业务中，往往都是一个列表中需要用到多个不同的Cell样式，这就需要创建N个.h .m .xib文件。而且这些.m中的实现还差不多。<br>后来发现，一个.xib文件中可以创建多个Cell,如图：</p>
-<p><img src="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-1.png" alt="多个Cell"></p>
+<p><img src="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-1.png-main" alt="多个Cell"></p>
 <p>这样感觉方便多了。</p>
+<a id="more"></a>
 <hr>
-<h4 id="第一步创建"><a href="#第一步创建" class="headerlink" title="第一步创建"></a><strong>第一步创建</strong></h4><p>先和普通创建xibCell一样，在xib中选中左边那个Cell，copy(command + c)，然后paste(command + v).xib中就多个Cell了，O(∩_∩)O~~<br><img src="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-2.png" alt="多个Cell"></p>
+<h4 id="第一步创建"><a href="#第一步创建" class="headerlink" title="第一步创建"></a><strong>第一步创建</strong></h4><p>先和普通创建xibCell一样，在xib中选中左边那个Cell，copy(command + c)，然后paste(command + v).xib中就多个Cell了，O(∩_∩)O~~<br><img src="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-2.png-main" alt="多个Cell"></p>
 <h4 id="第二步设置Identifier和代码使用"><a href="#第二步设置Identifier和代码使用" class="headerlink" title="第二步设置Identifier和代码使用"></a><strong>第二步设置Identifier和代码使用</strong></h4><p>在代码中创建Cell时</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if (!cell) &#123;</span><br><span class="line">     cell = [[[NSBundle mainBundle] loadNibNamed:@&quot;TempTableViewCell&quot; owner:self options:nil] firstObject];</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 <p>TempTableViewCell是你的xib文件名，firstObject是第一个Cell，按顺序排的。<br>第二个怎么办？？</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cell = [[[NSBundle mainBundle] loadNibNamed:@&quot;TempTableViewCell&quot; owner:self options:nil] objectAtIndex:2];</span><br></pre></td></tr></table></figure>
 <p>再多依次类推哈。（提示：如果在Cell中添加手势的话，loadNibNamed: 这个返回的数组中会比Cell多哦，大家注意）</p>
 <p>设置每个Cell的identifier(identifier 随意起的，我的规律就是类名+第几，不要重复就行),如图：</p>
-<p><img src="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-3.png" alt="设置每个Cell的identifier"></p>
+<p><img src="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-3.png-main" alt="设置每个Cell的identifier"></p>
 <p>这样在重用队列中重复使用Cell的时候，能找到正确的Cell,</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TempTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@&quot;TempTableViewCellFirst&quot;];</span><br></pre></td></tr></table></figure>
 <p>可以根据indexPath设置不同的identifier。<br>可以把创建Cell的过程放在Cell.m中，做成类方法，这样不至于VC中的代码过多。<br>cell.h中：</p>
@@ -373,14 +368,14 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath &#123;</span><br><span class="line">    TempTableViewCell *cell = [TempTableViewCell tempTableViewCellWith:tableView indexPath:indexPath];</span><br><span class="line">    return cell;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>是不是很方便呢。</p>
 <h4 id="设置属性"><a href="#设置属性" class="headerlink" title="设置属性"></a><strong>设置属性</strong></h4><p>快捷设置xib属性：</p>
-<h5 id="一-在-h或者-m中先写好属性，如图："><a href="#一-在-h或者-m中先写好属性，如图：" class="headerlink" title="一. 在.h或者.m中先写好属性，如图："></a>一. 在.h或者.m中先写好属性，如图：</h5><p><img src="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-4.png" alt="设置属性"></p>
+<h5 id="一-在-h或者-m中先写好属性，如图："><a href="#一-在-h或者-m中先写好属性，如图：" class="headerlink" title="一. 在.h或者.m中先写好属性，如图："></a>一. 在.h或者.m中先写好属性，如图：</h5><p><img src="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-4.png-main" alt="设置属性"></p>
 <h5 id="二-在xib中就可以拖拽连接属性了，如图："><a href="#二-在xib中就可以拖拽连接属性了，如图：" class="headerlink" title="二. 在xib中就可以拖拽连接属性了，如图："></a>二. 在xib中就可以拖拽连接属性了，如图：</h5><p><img src="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-5.gif" alt="property.gif"></p>
 <p>设置好属性，下面就是使用了，<br>配置Cell</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> *  @author god~long, 16-04-03 16:04:04</span><br><span class="line"> *</span><br><span class="line"> *  配置TempCell的方法</span><br><span class="line"> *</span><br><span class="line"> *  @param indexPath 对应TableView的indexPath</span><br><span class="line"> */</span><br><span class="line">- (void)configTempCellWith:(NSIndexPath *)indexPath;</span><br></pre></td></tr></table></figure>
 <p>.m中：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">- (void)configTempCellWith:(NSIndexPath *)indexPath &#123;</span><br><span class="line">    switch (indexPath.row) &#123;</span><br><span class="line">        case 0: &#123;</span><br><span class="line">            _label1.text = @&quot;我是Label1&quot;;</span><br><span class="line">            _customImageView.image = [UIImage imageNamed:@&quot;8&quot;];</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">        case 1: &#123;</span><br><span class="line">            _label2.text = @&quot;我是Label2&quot;;</span><br><span class="line">            [_customButton setTitle:@&quot;我是button&quot; forState:UIControlStateNormal];</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">        case 2: &#123;</span><br><span class="line">            _label1.text = @&quot;我是第三个Cell的Label1&quot;;</span><br><span class="line">            _label2.text = @&quot;我是第三个Cell的Label2&quot;;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">        default:</span><br><span class="line">            break;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>重点：每个Cell设置链接的属性都是单独处理的，没连，在用的时候即使你用了，也设置不了。</strong><br>运行效果：</p>
-<p><img src="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-6.png" alt="运行效果"></p>
+<p><img src="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-6.png-main" alt="运行效果"></p>
 <hr>
 <p><img src="http://7xsy1z.com2.z0.glb.clouddn.com/one-piece.png" alt=""></p>
 
@@ -405,7 +400,7 @@
           
             <a href="/tags/xib/" rel="tag">#xib</a>
           
-            <a href="/tags/iOS/" rel="tag">#iOS</a>
+            <a href="/tags/tableviewCell/" rel="tag">#tableviewCell</a>
           
         </div>
       
