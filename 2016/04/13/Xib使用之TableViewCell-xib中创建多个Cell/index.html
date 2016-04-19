@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-5.gif">
 <meta property="og:image" content="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-6.png-main">
 <meta property="og:image" content="http://7xsy1z.com2.z0.glb.clouddn.com/one-piece.png">
-<meta property="og:updated_time" content="2016-04-14T02:12:09.000Z">
+<meta property="og:updated_time" content="2016-04-19T15:38:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Xib使用之TableViewCell.xib中创建多个Cell">
 <meta name="twitter:description" content="初次使用xib创建UITableviewCell的时候，我都是一个xib文件里，只创建一个Cell,在实际业务中，往往都是一个列表中需要用到多个不同的Cell样式，这就需要创建N个.h .m .xib文件。而且这些.m中的实现还差不多。后来发现，一个.xib文件中可以创建多个Cell,如图：
@@ -376,6 +376,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">- (void)configTempCellWith:(NSIndexPath *)indexPath &#123;</span><br><span class="line">    switch (indexPath.row) &#123;</span><br><span class="line">        case 0: &#123;</span><br><span class="line">            _label1.text = @&quot;我是Label1&quot;;</span><br><span class="line">            _customImageView.image = [UIImage imageNamed:@&quot;8&quot;];</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">        case 1: &#123;</span><br><span class="line">            _label2.text = @&quot;我是Label2&quot;;</span><br><span class="line">            [_customButton setTitle:@&quot;我是button&quot; forState:UIControlStateNormal];</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">        case 2: &#123;</span><br><span class="line">            _label1.text = @&quot;我是第三个Cell的Label1&quot;;</span><br><span class="line">            _label2.text = @&quot;我是第三个Cell的Label2&quot;;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">        default:</span><br><span class="line">            break;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>重点：每个Cell设置链接的属性都是单独处理的，没连，在用的时候即使你用了，也设置不了。</strong><br>运行效果：</p>
 <p><img src="http://7xsy1z.com2.z0.glb.clouddn.com/xib-tableviewCell-6.png-main" alt="运行效果"></p>
+<p>demo地址：<a href="https://github.com/god-long/longDemoCollection" target="_blank" rel="external">点我哦</a></p>
 <hr>
 <p><img src="http://7xsy1z.com2.z0.glb.clouddn.com/one-piece.png" alt=""></p>
 
@@ -510,7 +511,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -527,7 +528,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
