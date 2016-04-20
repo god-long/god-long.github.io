@@ -90,7 +90,7 @@
 <meta property="og:image" content="http://7xsy1z.com2.z0.glb.clouddn.com/blog/iOS7-scan-code/2.jpg-main">
 <meta property="og:image" content="http://7xsy1z.com2.z0.glb.clouddn.com/blog/iOS7-scan-code/3.png-main">
 <meta property="og:image" content="http://7xsy1z.com2.z0.glb.clouddn.com/one-piece.png">
-<meta property="og:updated_time" content="2016-04-14T02:12:37.000Z">
+<meta property="og:updated_time" content="2016-04-20T09:54:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS7系统二维码扫描（设置扫描区域、中空区域）">
 <meta name="twitter:description" content="显示扫描二维码的界面12345678910111213141516171819202122232425262728293031323334353637AVCaptureDevice  *captureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];AVCaptureDeviceInput *capture">
@@ -363,7 +363,7 @@
 <p>这个方法是把_captureOutput.rectOfInterest坐标系转成preview layer 的坐标系的rect。</p>
 <p>通过打印数据可以验证成功，真机实验也是正确的。</p>
 <h4 id="设置中间透空区域"><a href="#设置中间透空区域" class="headerlink" title="设置中间透空区域"></a>设置中间透空区域</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">UIView *maskView = [[UIView alloc] initWithFrame:CM(0, 64, Screen_Width, Screen_Height - 64)];</span><br><span class="line"></span><br><span class="line">maskView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];</span><br><span class="line"></span><br><span class="line">[self.view addSubview:maskView];</span><br><span class="line"></span><br><span class="line">UIBezierPath *maskPath = [UIBezierPath bezierPathWithRect:CM(0, 0, Screen_Width, Screen_Height)];</span><br><span class="line"></span><br><span class="line">[maskPath appendPath:[[UIBezierPath bezierPathWithRoundedRect:CM(30, 100 - 64, Screen_Width - 60, 300) cornerRadius:1] bezierPathByReversingPath]];</span><br><span class="line"></span><br><span class="line">CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];</span><br><span class="line"></span><br><span class="line">maskLayer.path = maskPath.CGPath;</span><br><span class="line"></span><br><span class="line">maskView.layer.mask = maskLayer;</span><br></pre></td></tr></table></figure>
-<p>Demo地址：<a href="">先不要点我</a> 还没有上传 😂</p>
+<p>Demo地址：<a href="https://github.com/god-long/longDemoCollection" target="_blank" rel="external">github😂</a>  </p>
 <hr>
 <p><img src="http://7xsy1z.com2.z0.glb.clouddn.com/one-piece.png" alt="one piece"></p>
 
