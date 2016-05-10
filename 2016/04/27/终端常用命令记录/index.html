@@ -70,6 +70,8 @@
 
 
 
+  <link rel="alternate" href="/atom.xml" title="龙域" type="application/atom+xml" />
+
 
 
 
@@ -92,7 +94,7 @@ $ open DoctorAssistant.xcworkspace/
 $ open DoctorAssistant.xcworkspace/
 如果open一个文件，则会使用关联的程序打开之。例如open screenshot.png会在Preview中查看图片。
 可以使用-a选项要求自行选择打开的程序，或使用-e强制在T">
-<meta property="og:updated_time" content="2016-04-29T08:40:23.000Z">
+<meta property="og:updated_time" content="2016-05-05T03:41:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="终端常用命令记录">
 <meta name="twitter:description" content="OS X命令openopen命令用于打开文件、目录或执行程序。就等同于在命令行模式下，重复图形界面“双击”的动作。例如命令行打开iOS的工程文件：
@@ -359,11 +361,18 @@ $ open DoctorAssistant.xcworkspace/
 <p>open一个目录会在Finder窗口中打开此目录。一个很有用的技巧是open .打开当前目录。</p>
 <p>Finder和终端的交互是双向的——把文件从Finder中拖入终端，就等同于把文件的完整路径粘贴到命令行中。</p>
 <a id="more"></a>
+<h5 id="强制-Finder-程序显示-不显示隐藏文件"><a href="#强制-Finder-程序显示-不显示隐藏文件" class="headerlink" title="强制 Finder 程序显示 | 不显示隐藏文件"></a>强制 Finder 程序显示 | 不显示隐藏文件</h5><p>显示： <code>defaults write com.apple.finder AppleShowAllFiles TRUE</code></p>
+<p>不显示：<code>defaults write com.apple.finder AppleShowAllFiles FALSE</code></p>
+<h5 id="显示终端窗口中之前输入的命令"><a href="#显示终端窗口中之前输入的命令" class="headerlink" title="显示终端窗口中之前输入的命令"></a>显示终端窗口中之前输入的命令</h5><p>`</p>
 <h4 id="SVN-命令"><a href="#SVN-命令" class="headerlink" title="SVN 命令"></a>SVN 命令</h4><h5 id="svn-log"><a href="#svn-log" class="headerlink" title="svn log"></a>svn log</h5><p><code>svn log | head -n X</code></p>
 <p>x代表<strong>行数</strong>，显示log信息中最新的多少行</p>
 <p><code>svn log -r {2016-4-24}:{2016-4-26} -v</code></p>
 <p>开始日期:结束日期</p>
 <p>-v 打印<strong>详细</strong>信息  和svn log –verbose 中 –verbose一样的效果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">svn log         #什么都不加会显示所有版本commit的日志信息:版本、作者、日期、comment。</span><br><span class="line"></span><br><span class="line">svn log -r 4:20 #只看版本4到版本20的日志信息，顺序显示。</span><br><span class="line"></span><br><span class="line">svn log -r 20:5 #显示版本20到4之间的日志信息，逆序显示。</span><br><span class="line"></span><br><span class="line">svn log test.c  #查看文件test.c的日志修改信息。</span><br><span class="line"></span><br><span class="line">svn log -r 8 -v #显示版本8的详细修改日志，包括修改的所有文件列表信息。</span><br><span class="line"></span><br><span class="line">svn log -r 8 -v -q   #显示版本8的详细提交日志，不包括comment。</span><br><span class="line"></span><br><span class="line">svn log -v -r 88:866 #显示从版本88到版本866之间，当前代码目录下所有变更的详细信息 。</span><br><span class="line"></span><br><span class="line">svn log -v dir  #查看目录的日志修改信息,需要加v。</span><br><span class="line"></span><br><span class="line">svn log http://foo.com/svn/trunk/code/  #显示代码目录的日志信息。</span><br></pre></td></tr></table></figure>
+<h5 id="svn-info"><a href="#svn-info" class="headerlink" title="svn info"></a>svn info</h5><p>查看 Repository Root、 Repository UUID等信息</p>
+<h5 id="svn-diff"><a href="#svn-diff" class="headerlink" title="svn diff"></a>svn diff</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">svn diff               #什么都不加，会坚持本地代码和缓存在本地.svn目录下的信息的不同;信息太多，没啥用处。</span><br><span class="line"></span><br><span class="line">svn diff -r 3          #比较你的本地代码和版本号为3的所有文件的不同。</span><br><span class="line"></span><br><span class="line">svn diff -r 3 text.c   #比较你的本地代码和版本号为3的text.c文件的不同。</span><br><span class="line"></span><br><span class="line">svn diff -r 5:6        #比较版本5和版本6之间所有文件的不同。</span><br><span class="line"></span><br><span class="line">svn diff -r 5:6 text.c #比较版本5和版本6之间的text.c文件的变化。</span><br><span class="line"></span><br><span class="line">svn diff -c 6 test.c    #比较版本5和版本6之间的text.c文件的变化。</span><br></pre></td></tr></table></figure>
+<h4 id="GIT-命令"><a href="#GIT-命令" class="headerlink" title="GIT 命令"></a>GIT 命令</h4><h5 id="git-config-–list"><a href="#git-config-–list" class="headerlink" title="git config –list"></a>git config –list</h5><p>查看当前文件的git配置,如：user.email、user.name、remote.origin.url…</p>
 
       
     </div>
@@ -522,6 +531,13 @@ $ open DoctorAssistant.xcworkspace/
         </nav>
 
         
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
 
         <div class="links-of-author motion-element">
           
@@ -568,7 +584,7 @@ $ open DoctorAssistant.xcworkspace/
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#OS-X命令"><span class="nav-number">1.</span> <span class="nav-text">OS X命令</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#open"><span class="nav-number">1.1.</span> <span class="nav-text">open</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SVN-命令"><span class="nav-number">2.</span> <span class="nav-text">SVN 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#svn-log"><span class="nav-number">2.1.</span> <span class="nav-text">svn log</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#OS-X命令"><span class="nav-number">1.</span> <span class="nav-text">OS X命令</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#open"><span class="nav-number">1.1.</span> <span class="nav-text">open</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#强制-Finder-程序显示-不显示隐藏文件"><span class="nav-number">1.2.</span> <span class="nav-text">强制 Finder 程序显示 | 不显示隐藏文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#显示终端窗口中之前输入的命令"><span class="nav-number">1.3.</span> <span class="nav-text">显示终端窗口中之前输入的命令</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SVN-命令"><span class="nav-number">2.</span> <span class="nav-text">SVN 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#svn-log"><span class="nav-number">2.1.</span> <span class="nav-text">svn log</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#svn-info"><span class="nav-number">2.2.</span> <span class="nav-text">svn info</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#svn-diff"><span class="nav-number">2.3.</span> <span class="nav-text">svn diff</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GIT-命令"><span class="nav-number">3.</span> <span class="nav-text">GIT 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#git-config-–list"><span class="nav-number">3.1.</span> <span class="nav-text">git config –list</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
